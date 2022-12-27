@@ -97,6 +97,19 @@ public class AESEncrypter {
         while ((numRead = cipherIn.read(buf)) >= 0)
             out.write(buf, 0, numRead);
         out.close();
+        /*
+         * This code is used to decrypt a stream of data that has been encrypted with
+         * the specified cipher.
+         * It first reads the initialization vector (IV) that was used for the
+         * encryption.
+         * This initialization vector is then used to initialize the Cipher, so that it
+         * can properly decrypt the data with the correct key.
+         * After initializing the Cipher, a CipherInputStream is created which will
+         * begin decrypting data from the InputStream in and
+         * writing it to an OutputStream out. The decrypted data is then read from
+         * cipherIn, written to buf, and
+         * ultimately written out in plaintext to out. At the end, out is closed.
+         */
     }
 
     public static byte[] createRandBytes(int numBytes)
