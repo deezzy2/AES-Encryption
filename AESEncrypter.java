@@ -51,7 +51,6 @@ public class AESEncrypter {
      * encryption process and then instantiates a Cipher object with
      * AES/CBC/PKCS5Padding parameters indicating that we are using AES algorithm
      * with Cipher Block Chaining mode and PKCS#5 padding scheme respectively.
-     * 
      */
 
     public void encrypt(InputStream in, OutputStream out) throws Exception {
@@ -68,22 +67,21 @@ public class AESEncrypter {
             cipherOut.write(buf, 0, numRead);
         }
         cipherOut.close();
+        /*
+         * This code is an encryption method that takes input from an InputStream and
+         * writes it to the OutputStream after the data has been encrypted.
+         * First, it creates a random initialization vector (ivBytes) and then writes it
+         * to the OutputStream.
+         * An IvParameterSpec object is created using ivBytes and is then used to
+         * initialize the cipher in encryption mode and with a secret key.
+         * 
+         * A CipherOutputStream is then created using that cipher, which reads in clear
+         * text bytes from the InputStream, encrypts them,
+         * and then writes them out to the OutputStream. Once all of the data has been
+         * read from the InputStream and
+         * written to the CipherOutput Stream, it closes all of the streams.
+         */
     }
-
-    /*
-     * This code is an encryption method that takes input from an InputStream and
-     * writes it to the OutputStream after the data has been encrypted.
-     * First, it creates a random initialization vector (ivBytes) and then writes it
-     * to the OutputStream.
-     * An IvParameterSpec object is created using ivBytes and is then used to
-     * initialize the cipher in encryption mode and with a secret key.
-     * 
-     * A CipherOutputStream is then created using that cipher, which reads in clear
-     * text bytes from the InputStream, encrypts them,
-     * and then writes them out to the OutputStream. Once all of the data has been
-     * read from the InputStream and
-     * written to the CipherOutput Stream, it closes all of the streams.
-     */
 
     public void decrypt(InputStream in, OutputStream out) throws Exception {
         // read IV first
@@ -118,6 +116,15 @@ public class AESEncrypter {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
         sr.nextBytes(bytesBuffer);
         return bytesBuffer;
+        /*
+         * This code creates and returns an array of random bytes of a certain size.
+         * It does this by creating an array called "bytesBuffer" which is of length
+         * numBytes.
+         * It then generates a secure random number using the SecureRandom class with
+         * the SHA1 algorithm, and
+         * assigns the randoms bytes to the byte array using the sr.nextBytes() method.
+         * Finally it returns the array of random bytes.
+         */
     }
 
     public static void main(String[] args) throws Exception {
@@ -137,5 +144,15 @@ public class AESEncrypter {
         encrypter.decrypt(in, out);
         in.close();
         out.close();
+        /*
+         * This code is creating and implementing encryption and decryption for a file.
+         * A key is created with the createRandBytes() method that defines the size of
+         * the encryption.
+         * An AES Encrypter object is then created which then encrypts and decrypts the
+         * file input.txt in two different files;
+         * "input.txt.enc" and "input.txtdec".
+         * These encrypted files keep the data safe from anyone who doesn't have the key
+         * to decrypt them, thus keeping it secure.
+         */
     }
 }
