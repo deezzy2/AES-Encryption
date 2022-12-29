@@ -13,4 +13,4 @@ In AES, there are four main parts:
 
 In Java server-side applications, developers usually use javax crypto packages for implementing AES encryption or decryption algorithms, where support for different key sizes (128 , 192 & 256 bit ) as well as modes of operation(ECB, CBC etc) are available out of box due to extensive work put into making these APIs secure yet intuitive enough to use.
 
-check out this note https://www.notion.so/abrshkorra/Chapter-12-3d974a1afc164054be1dcad476df6488
+check out this note https://abrshkorra.notion.site/Chapter-12-3d974a1afc164054be1dcad476df6488
