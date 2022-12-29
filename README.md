@@ -4,7 +4,7 @@
 
 ```
 Step 1: clone this repo
-Step 2: Add a input.txt file with the message you want to encrypt in it.
+Step 2: Add a input.txt file, with the message you want to encrypt, in the same directory where the AESEncrypter.java exists.
 Step 3: Run the java code
 ```
 
