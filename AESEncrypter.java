@@ -21,7 +21,6 @@ public class AESEncrypter {
     }
 
     /*
-     * 
      * Discription for the above code
      * 
      * This is the definition of an AESEncrypter class that is used for
