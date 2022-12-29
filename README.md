@@ -9,7 +9,6 @@ Step 3: Run the java code
 ```
 
 `Results:` <br>
-You will get
 
 - input.txt.enc file that has the enctypted message in it. <br>
 - input.txt.dec file with the original message you provided in the input.txt file.
