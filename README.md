@@ -3,8 +3,8 @@
 ## How does it work?
 
 ```
-Step 1: clone this repo<br>
-Step 2: Add a input.txt file with the message you want to encrypt in it.<br>
+Step 1: clone this repo <br>
+Step 2: Add a input.txt file with the message you want to encrypt in it. <br>
 Step 3: Run the java code
 ```
 
