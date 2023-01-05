@@ -155,5 +155,3 @@ public class AESEncrypter {
          */
     }
 }
-
-// how can we extend this ?
