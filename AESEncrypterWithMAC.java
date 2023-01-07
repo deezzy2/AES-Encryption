@@ -107,9 +107,7 @@ public class AESEncrypterWithMAC {
             decrypter.decrypt(in, out);
             in.close();
             out.close();
-
         } else
             System.out.println("HMAC-SHA256 verification failed");
     }
-
 }
