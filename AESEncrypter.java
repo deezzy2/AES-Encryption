@@ -87,8 +87,8 @@ public class AESEncrypter {
         in.read(ivBytes);
         ivSpec = new IvParameterSpec(ivBytes);
         cipher.init(Cipher.DECRYPT_MODE, secretKey, ivSpec);
-        try (// Bytes read from in will be decrypted
-                CipherInputStream cipherIn = new CipherInputStream(in, cipher)) {
+        // Bytes read from in will be decrypted
+        try (CipherInputStream cipherIn = new CipherInputStream(in, cipher)) {
             // Read in the decrypted bytes and write the plaintext to out
             int numRead = 0;
             while ((numRead = cipherIn.read(buf)) >= 0)
